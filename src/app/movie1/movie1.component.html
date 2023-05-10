@@ -1,0 +1,27 @@
+<div class="search-container">
+  <input type="number" [(ngModel)]="search" placeholder="Enter movie ID" title="Search by movie ID">
+  <button (click)="getMovie()" class="search-button">Search</button>
+</div>
+
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>NameMovie</th>
+        <th>TypeMovie</th>
+        <th>MoviePrice</th>
+        <th>Movieid</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngIf="movies">
+        <td>{{ movies.NameMovie }}</td>
+        <td>{{ movies.TypeMovie }}</td>
+        <td>{{ movies.MoviePrice }}</td>
+        <td>{{ movies.Movieid }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
